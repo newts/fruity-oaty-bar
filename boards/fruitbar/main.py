@@ -12,30 +12,6 @@ from kmk.keys import KC
 from kmk.modules.layers import Layers
 from kmk.scanners import DiodeOrientation
 
-keyboard = KMKKeyboard()
-
-# needed for OLED
-#
-keyboard.SCL = board.GP27
-keyboard.SDA = board.GP26
-
-
-oled_ext = Oled(
-    OledData(
-        corner_one={0: OledReactionType.STATIC, 1: ['layer']},
-        corner_two={0: OledReactionType.LAYER, 1: ['1', '2', '3', '4']},
-        corner_three={
-            0: OledReactionType.LAYER,
-            1: ['base', 'raise', 'lower', 'adjust'],
-        },
-        corner_four={
-            0: OledReactionType.LAYER,
-            1: ['qwerty', 'nums', 'shifted', 'leds'],
-        },
-    ),
-    toDisplay=OledDisplayMode.TXT,
-    flip=False,
-)
 
 _______ = KC.TRNS
 XXXXXXX = KC.NO
