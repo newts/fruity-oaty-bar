@@ -2,22 +2,16 @@ import board
 
 from kb import KMKKeyboard
 
-from kmk.extensions.peg_oled_Display import (
-    Oled,
-    OledData,
-    OledDisplayMode,
-    OledReactionType,
-)
 from kmk.keys import KC
 from kmk.modules.layers import Layers
 from kmk.scanners import DiodeOrientation
 
+keyboard = KMKKeyboard()
 
 _______ = KC.TRNS
 XXXXXXX = KC.NO
 
 layers = Layers()
-keyboard.extensions.append(oled_ext)
 
 keyboard.modules = [layers]
 
